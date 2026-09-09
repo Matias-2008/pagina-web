@@ -642,12 +642,17 @@ a {
 
 /* ===== Reveal on scroll ===== */
 .reveal {
-    opacity: 0;
-    transform: translateY(40px);
+    opacity: 1;
+    transform: none;
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.reveal.visible {
+.js .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.js .reveal.visible {
     opacity: 1;
     transform: translateY(0);
 }

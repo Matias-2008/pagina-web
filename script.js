@@ -1,3 +1,6 @@
+// ===== Solo ocultar contenido de reveal cuando JS esté disponible =====
+document.documentElement.classList.add('js');
+
 // ===== Navbar: change on scroll =====
 const navbar = document.getElementById('navbar');
 
