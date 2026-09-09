@@ -35,6 +35,7 @@ let charIndex = 0;
 let deleting = false;
 
 function type() {
+    if (!typedRole) return;
     const current = roles[roleIndex];
 
     if (!deleting) {

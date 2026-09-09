@@ -1,32 +1,113 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>html5</title>
-  </head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Notas de HTML5 de Guerrero Acuña Matias Manuel, estudiante de Ingeniería de Sistemas">
+    <title>HTML5 | Guerrero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <body>
-    <h1 style="color: blue; text-align: center">
-      Guerrero Acuña Matias Manuel
-    </h1>
-    <h1>Estudiante de ingenieria de sistemas</h1>
-    <nav>
-      <ul>
-        <li><a href="">Enlace 1</a></li>
-        <li><a href="">Enlace 2</a></li>
-        <li><a href="">Enlace 3</a></li>
-      </ul>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">G.</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="css.html">CSS3</a></li>
+                <li><a href="html5.html">HTML5</a></li>
+            </ul>
+        </div>
     </nav>
-    <h1>Biografia</h1>
-    <h1>x</h1>
-    <footer>
-      <p>&copy; 2026 Mi sitio web. todos los derechos reservados</p>
-      <nav>
-        <a href="index.html">inicio-</a>
-        <a href="css.html">CSS</a>
-        <a href="html5.html">HTML5</a>
-      </nav>
+
+    <header class="page-hero">
+        <h1 class="page-title">HTML5</h1>
+        <p class="page-subtitle">Lenguaje de marcado de hipertexto — curso de Programación Web I</p>
+    </header>
+
+    <main class="container">
+
+        <section class="section">
+            <h2 class="section-title"><span class="section-number">01.</span> ¿Qué es HTML5?</h2>
+            <p class="page-text reveal">
+                HTML5 es el lenguaje de <strong>estructura y contenido</strong> de toda página web.
+                Define los elementos (texto, imágenes, videos, enlaces) y la semántica del documento.
+                Junto a CSS3 forman la base de todo lo que desarrollo como estudiante de Ingeniería
+                de Sistemas.
+            </p>
+            <div class="info-cards">
+                <article class="info-card reveal">
+                    <h3>Etiquetas semánticas</h3>
+                    <p><code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code> y <code>footer</code> dan significado a cada parte.</p>
+                </article>
+                <article class="info-card reveal">
+                    <h3>Multimedia nativa</h3>
+                    <p><code>&lt;video&gt;</code> y <code>&lt;audio&gt;</code> integran contenido sin plugins externos.</p>
+                </article>
+                <article class="info-card reveal">
+                    <h3>Formularios</h3>
+                    <p>Controles nuevos como <code>email</code>, <code>date</code>, <code>range</code> y validación nativa.</p>
+                </article>
+                <article class="info-card reveal">
+                    <h3>Canvas y SVG</h3>
+                    <p>Gráficos y dibujos dinámicos directamente en el navegador.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="section-number">02.</span> Estructura básica</h2>
+            <pre class="code-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Mi página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;Hola mundo&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+      &lt;p&gt;Bienvenido a mi sitio.&lt;/p&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <p class="page-text reveal">
+                Esta estructura es el punto de partida de todas mis prácticas: la etiqueta
+                <code>&lt;h1&gt;</code> para títulos, <code>&lt;p&gt;</code> para párrafos y
+                las etiquetas semánticas que organizan la página.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="section-number">03.</span> Temario visto en clase</h2>
+            <ul class="topic-list reveal">
+                <li>Estructura y doctype de un documento HTML5</li>
+                <li>Etiquetas semánticas y su importancia</li>
+                <li>Enlaces, imágenes y rutas</li>
+                <li>Listas, tablas y formularios</li>
+                <li>Insertar audio y video con HTML5</li>
+                <li>Mejores prácticas de accesibilidad</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="css.html">CSS3</a>
+            <a href="html5.html">HTML5</a>
+        </nav>
+        <p>&copy; 2026 Guerrero Acuña Matias Manuel. Todos los derechos reservados.</p>
+        <p class="footer-credit">Diseñado por Guerrero.</p>
     </footer>
-  </body>
+
+    <script src="script.js"></script>
+</body>
 </html>

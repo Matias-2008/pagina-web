@@ -1,35 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>html5</title>
-    <link rel="stylesheet" href="css.css"> 
-    
+    <meta name="description" content="Notas de CSS3 de Guerrero Acuña Matias Manuel, estudiante de Ingeniería de Sistemas">
+    <title>CSS3 | Guerrero</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-    <h1 style=""color: ">Guerrero Acuña Matias Manuel</h1>
-    <h1>Estudiante de ingenieria de sistemas</h1>
-    <nav>
-        <ul>
-            <li><a href="">Enlace 1</a></li>
-            <li><a href="">Enlace 2</a></li>
-            <li><a href="">Enlace 3</a></li>
-        </ul>
-    </nav>
-    <h1>Biografia </h1>
-    <h1>x</h1>
-    <footer>
-        <p>&copy; 2026 Mi sitio web. todos los derechos reservados</p>
-        <nav>
-            <a href="index.html">inicio-</a>
-            <a href="css.html">CSS</a>
-            <a href="html5.html">HTML5</a>
-            
-        </nav>
-    </footer>
-    
-</body>
 
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">G.</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="css.html">CSS3</a></li>
+                <li><a href="html5.html">HTML5</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <h1 class="page-title">CSS3</h1>
+        <p class="page-subtitle">Hojas de Estilo en Cascada — curso de Programación Web I</p>
+    </header>
+
+    <main class="container">
+
+        <section class="section">
+            <h2 class="section-title"><span class="section-number">01.</span> ¿Qué es CSS?</h2>
+            <p class="page-text reveal">
+                CSS (Cascading Style Sheets) es el lenguaje que da <strong>estilo y diseño</strong> a los
+                documentos HTML. Como estudiante de esta asignatura, lo uso para controlar colores,
+                tipografías, espacios y la disposición de cada elemento de la página.
+            </p>
+            <div class="info-cards">
+                <article class="info-card reveal">
+                    <h3>Selectores</h3>
+                    <p>Apuntan a elementos del HTML para aplicarles estilos: <code>.clase</code>, <code>#id</code>, <code>etiqueta</code>.</p>
+                </article>
+                <article class="info-card reveal">
+                    <h3>Modelo de caja</h3>
+                    <p>Cada elemento es una caja con <code>margin</code>, <code>border</code>, <code>padding</code> y contenido.</p>
+                </article>
+                <article class="info-card reveal">
+                    <h3>Flexbox</h3>
+                    <p>Distribuye elementos en una línea o columna y alinea el contenido fácilmente.</p>
+                </article>
+                <article class="info-card reveal">
+                    <h3>Grid</h3>
+                    <p>Crea estructuras en filas y columnas, ideal para el layout de una página completa.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="section-number">02.</span> Ejemplo de sintaxis</h2>
+            <pre class="code-block"><code>/* Selector de clase */
+.boton {
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 50px;
+    transition: transform 0.3s;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+}</code></pre>
+            <p class="page-text reveal">
+                Un <code>h1</code> simple puede transformarse por completo con solo unas
+                líneas de CSS. Este estilo sobrio y moderno que ves en el portafolio
+                está construido 100% con estas técnicas.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="section-number">03.</span> Temario visto en clase</h2>
+            <ul class="topic-list reveal">
+                <li>Introducción a CSS y su función en la web</li>
+                <li>Colores, fondos y tipografías</li>
+                <li>Selectores avanzados y pseudo-clases (<code>:hover</code>, <code>:nth-child</code>)</li>
+                <li>Modelo de caja y posicionamiento</li>
+                <li>Diseño responsivo con <code>media queries</code></li>
+                <li>Flexbox y CSS Grid para layouts modernos</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="css.html">CSS3</a>
+            <a href="html5.html">HTML5</a>
+        </nav>
+        <p>&copy; 2026 Guerrero Acuña Matias Manuel. Todos los derechos reservados.</p>
+        <p class="footer-credit">Diseñado por Guerrero.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
