@@ -1,43 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guerrero</title>
+    <meta name="description" content="Portafolio de Guerrero Acuña Matias Manuel, estudiante de Ingeniería de Sistemas">
+    <title>Guerrero | Portafolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 style="color: rgb(132, 0, 255); text-align: center;">Guerrero Acuña Matias Manuel</h1>
-    <nav>
-        <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Sobre mi</a></li>
-            <li><a href="">Proyectos</a></li>
-            <li><a href="">Contactos</a></li>
-        </ul>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">G.</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
     </nav>
-    <h1>estudiante de ingenieria de sistemas</h1>
-    <section id="sobremi">
-        <h1>Sobre mí</h1>
-        <p>Hola, mi nombre es Guerrero Acuña Matias Manuel, tengo 18 años y soy estudiante de ingenieria de sistemas e informatica en la UNDC (universidad nacional de canete).</p>
-        <p> Me fascina la creacion de paginas web, y por eso estoy aprendiendo a programar y a crear paginas web.</p>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-avatar"><img src="foto.jpg.jpeg" alt="Foto de Guerrero Acuña Matias Manuel"></div>
+            <p class="hero-greeting">Hola, soy</p>
+            <h1 class="hero-name">Guerrero Acuña <span>Matias Manuel</span></h1>
+            <h2 class="hero-role" id="typedRole"></h2>
+            <p class="hero-description">
+                Estudiante de Ingeniería de Sistemas e Informática en la UNDC.
+                Apasionado por crear páginas web modernas y funcionales.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#contact" class="btn btn-outline">Contactar</a>
+            </div>
+        </div>
+        <a href="#about" class="hero-scroll" aria-label="Bajar a sobre mí">▼</a>
     </section>
-    <h1>proyectos</h1>
-    <section>
-        <article>
-            <p>pagina web</p>
-            <p>Este ejemplo es una pagina web creada con HTML5 y CSS.</p>
-        </article>
-        
-    </section>
-    <h1>contacto</h1>
-    <footer>
-        <p>&copy; 2026 Mi sitio web. todos los derechos reservados</p>
-        <nav>
-            <a href="index.html">inicio-</a>
-            <a href="css.html">CSS-</a>
+
+    <main class="container">
+
+        <section id="about" class="section">
+            <h2 class="section-title"><span class="section-number">01.</span> Sobre mí</h2>
+            <div class="about-grid reveal">
+                <div class="about-photo"><img src="foto.jpg.jpeg" alt="Foto de Guerrero Acuña Matias Manuel"></div>
+                <div class="about-text">
+                    <p>
+                        Hola, mi nombre es <strong>Guerrero Acuña Matias Manuel</strong>, tengo 18 años y soy
+                        estudiante de Ingeniería de Sistemas e Informática, cursando el IV ciclo en la
+                        UNDC (Universidad Nacional de Cañete).
+                    </p>
+                    <p>
+                        Me fascina la creación de páginas web y estoy aprendiendo constantemente a
+                        programar y a construir experiencias digitales atractivas. Mi objetivo es
+                        crecer como desarrollador y aportar soluciones creativas a cada proyecto.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-title"><span class="section-number">02.</span> Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill reveal">
+                    <div class="skill-header">
+                        <span>HTML5</span><span>80%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
+                </div>
+                <div class="skill reveal">
+                    <div class="skill-header">
+                        <span>CSS3</span><span>70%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
+                </div>
+                <div class="skill reveal">
+                    <div class="skill-header">
+                        <span>JavaScript</span><span>50%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-level="50"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-title"><span class="section-number">03.</span> Proyectos</h2>
+            <div class="projects-grid">
+                <article class="project-card reveal">
+                    <div class="project-image">WEB</div>
+                    <div class="project-body">
+                        <h3>Página web</h3>
+                        <p>Este ejemplo es una página web creada con HTML5 y CSS como parte de mi aprendizaje.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title"><span class="section-number">04.</span> Contacto</h2>
+            <p class="contact-note">¿Tienes un proyecto en mente? ¡Escríbeme!</p>
+            <a href="mailto:guerrero.mail@example.com" class="btn btn-primary">Enviar correo</a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="css.html">CSS</a>
             <a href="html5.html">HTML5</a>
         </nav>
+        <p>&copy; 2026 Guerrero Acuña Matias Manuel. Todos los derechos reservados.</p>
+        <p class="footer-credit">Diseñado por Guerrero.</p>
     </footer>
-    <p> Disenado por Guerrero.</p>
-    </body>
+
+    <script src="script.js"></script>
+</body>
 </html>
