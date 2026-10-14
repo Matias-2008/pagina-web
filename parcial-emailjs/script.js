@@ -1,8 +1,8 @@
 // ===== Configuración de EmailJS =====
 // Reemplaza estas constantes con tus credenciales de EmailJS.
-const EMAILJS_PUBLIC_KEY = "[MI_PUBLIC_KEY]";
-const EMAILJS_SERVICE_ID = "[MI_SERVICE_ID]";
-const EMAILJS_TEMPLATE_ID = "[MI_TEMPLATE_ID]";
+const EMAILJS_PUBLIC_KEY = "MENptUzqdTfkozbBZ";
+const EMAILJS_SERVICE_ID = "service_8brbrbh";
+const EMAILJS_TEMPLATE_ID = "template_jang35r";
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
