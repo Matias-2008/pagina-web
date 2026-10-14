@@ -71,6 +71,16 @@ Object.values(fields).forEach((field) => {
     });
 });
 
+const counterMensaje = document.getElementById("counter-mensaje");
+
+function updateCounter() {
+    const length = fields.mensaje.input.value.length;
+    counterMensaje.textContent = length + (length === 1 ? " carácter" : " caracteres");
+}
+
+fields.mensaje.input.addEventListener("input", updateCounter);
+updateCounter();
+
 function showNotice(message, type) {
     notice.textContent = message;
     notice.className = "form-notice show " + type;
@@ -108,6 +118,7 @@ form.addEventListener("submit", async (event) => {
         await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
         showNotice("¡Correo enviado correctamente!", "success");
         form.reset();
+        updateCounter();
     } catch (error) {
         console.error("Error al enviar el correo:", error);
         showNotice("Hubo un error al enviar el correo. Inténtalo de nuevo.", "error");
