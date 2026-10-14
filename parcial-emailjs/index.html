@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Examen parcial: envío de correos con EmailJS - Guerrero Acuña Matias Manuel">
+    <title>Parcial EmailJS | Guerrero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <span class="nav-logo">Parcial EmailJS</span>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Volver al portafolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <h1 class="page-title">Envío de Correos</h1>
+        <p class="page-subtitle">
+            Examen parcial de Desarrollo Web Full Stack — integración de EmailJS sin backend.
+        </p>
+    </header>
+
+    <main class="container">
+
+        <section class="section">
+            <div class="form-wrap">
+                <form id="emailForm" class="email-form" novalidate>
+
+                    <div class="form-field">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name">
+                        <span class="field-error" id="error-nombre"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="correo">Correo del destinatario</label>
+                        <input type="email" id="correo" name="correo" placeholder="destinatario@correo.com" autocomplete="email">
+                        <span class="field-error" id="error-correo"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="Asunto del correo">
+                        <span class="field-error" id="error-asunto"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje (mínimo 10 caracteres)"></textarea>
+                        <span class="field-error" id="error-mensaje"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Enviar correo</button>
+
+                    <p class="form-notice" id="formNotice" role="status" aria-live="polite"></p>
+                </form>
+
+                <aside class="form-side">
+                    <h3>¿Cómo funciona?</h3>
+                    <p>
+                        Este formulario usa <strong>EmailJS</strong> desde el navegador,
+                        sin backend ni claves privadas. Se valida cada campo antes de enviar
+                        y se muestra una notificación según el resultado.
+                    </p>
+                    <ul class="topic-list">
+                        <li>Validación de campos vacíos</li>
+                        <li>Formato de correo válido</li>
+                        <li>Mensaje de mínimo 10 caracteres</li>
+                        <li>Estado de carga al enviar</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-links">
+            <a href="../index.html">Inicio</a>
+            <a href="../css.html">CSS</a>
+            <a href="../html5.html">HTML5</a>
+        </nav>
+        <p>&copy; 2026 Guerrero Acuña Matias Manuel. Todos los derechos reservados.</p>
+        <p class="footer-credit">Diseñado por Guerrero.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
